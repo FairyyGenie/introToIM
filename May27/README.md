@@ -11,4 +11,6 @@ So when I put the random x and y assignment out side of the draw function, that 
 
 And through this assignment I realized if the two patterns are in the same loop, the pattern function that is called first in this instance the lines are always on top.
 
+In my program, the circles and the lines are from the same loop.
+
 ![](Genie'sArt.png)
