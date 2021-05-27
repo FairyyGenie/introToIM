@@ -1,7 +1,8 @@
 # introToIM
-## second class!
-### what are theseeee
-#### four hashes!!!
+## 2021 summer semester
+### A fun summer with IM
+#### Hopefully I will come back and edit them at the end of the summer and say I love it 
+
 here is the description of my project which I don't know what yet
 
 So what is it gonna be ?
