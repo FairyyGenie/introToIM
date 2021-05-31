@@ -5,6 +5,9 @@
 
 Logic of the piece:
 
+Here is the youtube link to see how it works in video:  
+https://youtu.be/sSmTXVgi02A
+
 It is like palying basketball one needs to put the shape inside the shape basket.  
 And in my program, mouse pressed will produce another shape from the mouse not pressed.  
 When putting each in the right position, different art modes will be activated.  
