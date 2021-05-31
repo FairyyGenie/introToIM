@@ -15,5 +15,7 @@ So here is the main page you will see:
 When putting the circle in the circle box, the art stage one will reveal.  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/May31/artmode2.png" width="400" height="400">
 
+When putting the rectangle in the rectangle box the art stage two will reveal.  
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/May31/Artmode1.png" width="400" height="400">
 
 
