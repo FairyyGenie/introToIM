@@ -1,4 +1,4 @@
 ## OOP assignment!
 ### this is a flying star piece
 
-![](flyingstar.png)
+![](flyingstars.png)
