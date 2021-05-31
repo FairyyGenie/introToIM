@@ -11,3 +11,9 @@ And in my program, mouse pressed will produce another shape from the mouse not p
 When putting each in the right position, different art modes will be activated.  
 So here is the main page you will see:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/May31/artmain.png" width="400" height="400">
+
+When putting the circle in the circle box, the art stage one will reveal.  
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/May31/artmode2.png" width="400" height="400">
+
+
+
