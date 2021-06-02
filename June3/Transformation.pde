@@ -2,6 +2,8 @@
 name: Genie Hou
  date: 2021 June 3
  assignment: Transformation project
+ interactive: Press the Mouse!!
+ concept: the flowers is a class, and to make it spin I used tranformation, and the flowers and the circle will spin when the mouse is pressed
  version: 2
  */
 
