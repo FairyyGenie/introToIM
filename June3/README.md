@@ -10,7 +10,7 @@ Same with the pelin noise circle, I drew inspiration from Professor Shiffman's t
 And the logic is the same, when pressing the mouse the circle will keep on noising.
 
 I haven't tried, but is it possible to put the rotate in another function seperating from display?  
-Cause when we leave the display function we would have already popMatrix(). 
+Cause when we leave the display function we would have already ````popMatrix()````.  
 So then theoretically NO?
 
 ![](flowers.png)
