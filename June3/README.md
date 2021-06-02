@@ -1,5 +1,5 @@
 # Here is a project on transformation and classes!
 ## Interactive art !
-### Big part of the inspiration comes from the pelin noise tutorial video by prof. Dan Shiffman.
+### The part where I use pelin noise that inspiration comes from the pelin noise tutorial video by prof. Dan Shiffman.
 
 
