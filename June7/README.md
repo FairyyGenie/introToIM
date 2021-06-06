@@ -25,6 +25,7 @@ I wonder if that is because noise produce when manipulating pixels we can not us
 For the image loading part, I was originally going to use the method which is allowing me to use the url to get the image as processing page says it is allowed.  
 I originally wrote this,  
     ````
-    String url="https://github.com/FairyyGenie/introToIM/blob/main/June7/friends.jpeg";  
+    String url="https://github.com/FairyyGenie/introToIM/blob/main/June7/friends.jpeg"; ````
+    ````
     photo=loadImage(url,"jpeg");
     ````
