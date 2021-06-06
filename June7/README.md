@@ -28,3 +28,8 @@ I originally wrote this,
     String url="https://github.com/FairyyGenie/introToIM/blob/main/June7/friends.jpeg";
     photo=loadImage(url,"jpeg");
     ````
+But when using the image the error keep on occuring, it says image has bad data or not an image.  
+At first I thought it was the image, but then when I was the image from local hardware there were no problem at all.  
+So I wonder if the processing page was outdated (page is here: https://processing.org/reference/loadImage_.html). 
+The load from web example from their website does not even work anymore.  
+
