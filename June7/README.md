@@ -27,6 +27,5 @@ I originally wrote this,
     ````
     String url="https://github.com/FairyyGenie/introToIM/blob/main/June7/friends.jpeg";
     
-    
     photo=loadImage(url,"jpeg");
     ````
