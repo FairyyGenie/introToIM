@@ -26,6 +26,5 @@ For the image loading part, I was originally going to use the method which is al
 I originally wrote this,  
     ````
     String url="https://github.com/FairyyGenie/introToIM/blob/main/June7/friends.jpeg";
-    
     photo=loadImage(url,"jpeg");
     ````
