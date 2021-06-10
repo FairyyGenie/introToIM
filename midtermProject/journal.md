@@ -9,3 +9,5 @@ Maybe I will use keys to determine the answers.
 ### progress everyday
 #### June 8th: Draw out the sketch and idea first
 
+<img src="" width="400" height="700">
+
