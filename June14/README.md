@@ -1,6 +1,9 @@
 # Arduino First Assignment!
 
+## Picture
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June14/IMG_8845.jpg" width="400" height="600">
+
+## Schematic
 
 ## Interesting thing that I find:
 First of all, Arduino is so much fun it feels like a small gate to so many possibilities.  
