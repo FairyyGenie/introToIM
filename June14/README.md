@@ -4,7 +4,7 @@
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June14/IMG_8845.jpg" width="400" height="600">
 
 ## Schematic
-Here is my first schematic drawing: 
+Here is my first schematic drawing:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June14/schematicjune14.png" width="700" height="500">
 
 ## Interesting thing that I find:
