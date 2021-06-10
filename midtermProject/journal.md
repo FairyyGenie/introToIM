@@ -17,5 +17,7 @@ Maybe I will use keys to determine the answers.
 #### June 10th: the sprite classes set up --> trash and the basket for trash
 
 
-#### June 11th: Game logic
+#### June 11th: Add the words and Game logic
+
+#### June 12th: Background music and effect
 
