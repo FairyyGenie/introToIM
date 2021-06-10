@@ -11,3 +11,11 @@ Maybe I will use keys to determine the answers.
 
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="400" height="700">
 
+#### June 9th: set up the windmill class --> spin when conditions met
+
+
+#### June 10th: the sprite classes set up --> trash and the basket for trash
+
+
+#### June 11th: Game logic
+
