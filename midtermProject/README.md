@@ -110,11 +110,14 @@ class game
     wind1 = new windmill();
     trash1 = new trash();
   }
-
 }
 ````
 
 ### 3. When to initiate class objects
+
+I kinda experienced around with when it is okay and not okay to initiate objects with ````new````.  
+I find out that it can only be done in static program.  
+So for example if it is used in ````void draw()```` or the functions called in draw(), it wouldn't work.
 
 ### 4. WindMill Rotation
 
