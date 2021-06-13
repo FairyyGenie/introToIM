@@ -16,6 +16,8 @@ Maybe I will use keys to determine the answers.
 Complete, it is actully quite simple making this class.  
 Just that I have to set up conditions some other day for the game.
 
+Also the game end up nothing like the ugly sketch ahah.
+
 #### June 10th: the sprite classes set up --> trash and the basket for trash
 
 Complete, this took me a lot of time.  
