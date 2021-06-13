@@ -1,7 +1,8 @@
 # Documentation for the midterm project
 
 ## first sketch of the game
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="400" height="650">
+This sketch did not help too much, the game turned out to be completely different.  
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="200" height="300">
 
 ## Actual Screenshots of the game & the video
 Here is the youtube link to my project: https://youtu.be/6U290t5brLA
