@@ -4,4 +4,4 @@
 <img src="plastic1.png">
 <img src="paper1.png">
 <img src="glass1.png">
-<img src="background.png">
+<img src="Background.png">
