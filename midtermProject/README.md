@@ -121,6 +121,14 @@ So for example if it is used in ````void draw()```` or the functions called in d
 
 ### 4. WindMill Rotation
 
+With the rotation, if I want to see the windmill spin, I cannot put ````rotate(45)````.  
+It has to be something continuously changing so we can see it move.  
+So somthing like ````rotate(frameCount/20)````, which I have used before just did not know that that was the reason.
+
+
 ### 5. Restart of the game
 
-### 6. Time management
+In order to restart the game, I have to redefine the game object.  
+````game1=new game();````. 
+which is completely fine, but then I have to also set all the boolean and the variables back to the original.  
+And it is so easy to forgot and do not know where the probelm is.
