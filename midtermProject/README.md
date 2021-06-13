@@ -1,6 +1,6 @@
 # Documentation for the midterm project
 
-## first sketch of the game
+## First sketch of the game
 This sketch did not help too much, the game turned out to be completely different.  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="200" height="300">
 
@@ -132,3 +132,5 @@ In order to restart the game, I have to redefine the game object.
 ````game1=new game();````. 
 which is completely fine, but then I have to also set all the boolean and the variables back to the original.  
 And it is so easy to forgot and do not know where the probelm is.
+
+
