@@ -9,6 +9,8 @@ Here is the youtube link to my project: https://youtu.be/6U290t5brLA
 
 Here are some screen shots:  
 
+For the background images and the items, it took me sometime to find them. I eventually used Canva and some editing tool to make them.  
+
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/begin.png" width="500" height="500"><img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/game1.png" width="500" height="500"><img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/game2.png" width="500" height="500"><img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/game3.png" width="500" height="500"><img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/final.png" width="500" height="500">
 
 ## Logic of the game
