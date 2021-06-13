@@ -39,4 +39,3 @@ Complete, the background music and the texts on screen set up.
 Complete, I made the image and code the text out for the results( the ending page).
 And set up the restart game or exit button.
 ###### Problem encountered: restarting the game I have to reset all global variables
-
