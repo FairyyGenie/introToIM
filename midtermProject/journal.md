@@ -13,11 +13,20 @@ Maybe I will use keys to determine the answers.
 
 #### June 9th: set up the windmill class --> spin when conditions met
 
+Complete, it is actully quite simple making this class.  
+Just that I have to set up conditions some other day for the game.
 
 #### June 10th: the sprite classes set up --> trash and the basket for trash
 
+Complete, this took me a lot of time.  
+I need to find image that I can use and set up the size and load them and then place them into aesthetically pleasing places.
 
 #### June 11th: Add the words and Game logic
 
+Complete, words and stages of game set up.
+The logic got me stuck for a while but completed !
+
 #### June 12th: Background music and effect
+
+Complete
 
