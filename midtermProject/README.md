@@ -91,6 +91,29 @@ So it is not changing the speed based on how many trash, but based on how long i
 
 ### 2. Class interaction
 
+This is the first time I actually tried to have one class access the others in Java.  
+It is quite different from Python and C++.  
+But great learning a new language!!
+
+I have the game class access the attributes of trash and windmill class.  
+Actually I straight up initiate objects in the constructor.
+
+This is what I wrote
+````
+class game
+{
+  windmill wind1;
+  trash trash1;
+  
+  game()
+  {
+    wind1 = new windmill();
+    trash1 = new trash();
+  }
+
+}
+````
+
 ### 3. When to initiate class objects
 
 ### 4. WindMill Rotation
