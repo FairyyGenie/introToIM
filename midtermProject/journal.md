@@ -17,28 +17,26 @@ Complete, it is actully quite simple making this class.
 Just that I have to set up conditions some other day for the game.
 
 Also the game end up nothing like the ugly sketch ahah.
-##### Problem encountered: 
 
 #### June 10th: the sprite classes set up --> trash and the basket for trash
 
 Complete, this took me a lot of time.  
 I need to find image that I can use and set up the size and load them and then place them into aesthetically pleasing places.
-###### Problem encountered: 
+###### Problem encountered: with creating the items it is not easy to find free images
 
 #### June 11th: Add the words and Game logic
 
 Complete, words and stages of game set up.
 The logic got me stuck for a while but completed !
-###### Problem encountered: 
+###### Problem encountered: The interaction of two classes took me some time
 
 #### June 12th: Background music and effect
 
 Complete, the background music and the texts on screen set up.
-###### Problem encountered: 
 
 #### June 13th: The ending stage of the game
 
 Complete, I made the image and code the text out for the results( the ending page).
 And set up the restart game or exit button.
-###### Problem encountered: 
+###### Problem encountered: restarting the game I have to reset all global variables
 
