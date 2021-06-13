@@ -4,6 +4,9 @@
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="400" height="650">
 
 ## Actual Screenshots of the game & the video
+Here is the youtube link to my project: https://youtu.be/6U290t5brLA
+
+Here are some screen shots:
 
 ## Problems I found 
 ### 1. The speed update
