@@ -41,36 +41,53 @@ But it was fun to make ! It's like a game/ windmill simulator.
 ### 1. The speed update
 
 I struggled with the speed updating SO MUCH. I eventually choose an alternative way cause despite my effort of trying to know what was wrong. I am not sure I know. 
-At a certain point, the entire processing shot down with some sort of error and won't let me update the speed the way I want.
+At a certain point, the entire processing shot down with some sort of error and won't let me update the speed the way I want.  
 These are my orginal code inside of the trash class:
+````global int howmany ```` is to keep track of howmany trash objects the programs has created.
 
 ````
-void drop(){
-  if (howmany <10)
-  {
-    speed = 5;
+class trash{
+//constructor and variables here
+  void drop(){
+    if (howmany <10)
+    {
+      speed = 5;
+    }
+    else if (howmany>=10 && howmany<20)
+    {
+      speed = 10;
+    }
+    else if (howmany>=20 && howmany<25)
+    {
+      speed = 15;
+    }
+    else if (howmany>25)
+    {
+      speed = 20;
+    }
   }
-  else if (howmany>=10 && howmany<20)
-  {
-    speed = 10;
-  }
-  else if (howmany>=20 && howmany<25)
-  {
-    speed = 15;
-  }
-  else if (howmany>25)
-  {
-    speed = 20;
-  }
-}
 
-void display(){
-    keyPressed();
-    drop();
-    image(sprite, x, y);
-    y=y+speed;
+  void display(){
+      keyPressed();
+      drop();
+      image(sprite, x, y);
+      y=y+speed;
+  }
 }
 ````
+Somehow, the speed wouldn't change and always stayed at 5. And it wouldn't speed up.  
+I tried to put the drop function in the game class and control it from there and switching places and changing up variables.  
+It didn't work, so I just decided I was going to go for the easier way.  
+This is the code I use eventually:
+````
+class trash{
+  float speed=5;
+  void drop(){
+    speed+=0.1;
+  }
+}
+````
+So it is not changing the speed based on how many trash, but based on how long it fell sorta like gravity.
 
 ### 2. Class interaction
 
