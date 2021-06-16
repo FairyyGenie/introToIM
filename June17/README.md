@@ -22,4 +22,5 @@ Link to the video: https://youtu.be/IP8CkGEJq54
 
 ### Problems
 I still haven't find out how and why but suddenly my serial monitor does not respond to me anymore.  
+I did what the website here told me to do: https://windowsreport.com/arduino-serial-monitor-not-working/
 I will keep trying to solve that problem.
