@@ -2,7 +2,7 @@
 ### Concept
 In this project, I want to use analog input (light sensor) to control digital input(switches).  
 I have 2 switches and 3 LED and 1 light sensor.
-So I used these code to acheive it. 
+So I used these kinds of code to acheive it. 
 ```` 
 if (sensorValue > 400)
   {
