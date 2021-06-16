@@ -13,7 +13,7 @@ if (sensorValue > 400)
   }
   ````
 ### Schematic and picture of the project and video link
-Link to the video:
+Link to the video: https://youtu.be/IP8CkGEJq54
 
 
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_1.jpg" width="300" height="400">
