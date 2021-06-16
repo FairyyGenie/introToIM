@@ -13,9 +13,9 @@ if (sensorValue > 400)
   }
   ````
 ### Schematic and picture of the project and video link
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_1.jpg" width=500 height=300>
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_1.jpg" width=300 height=500>
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_2.jpg" width=500 height=300>
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_Arduino.jpg" width=500 height=300>. 
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June_17_Arduino.jpg" width=500 height=300>. 
 
 ### Problems
 I still haven't find out how and why but suddenly my serial monitor does not respond to me anymore.  
