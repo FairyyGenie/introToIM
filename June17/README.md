@@ -13,6 +13,9 @@ if (sensorValue > 400)
   }
   ````
 ### Schematic and picture of the project and video link
+<img src=" " width=500 height=300>
+<img src=" " width=500 height=300>
+<img src=" " width=500 height=300>
 ### Problems
 I still haven't find out how and why but suddenly my serial monitor does not respond to me anymore.  
 I will keep trying to solve that problem.
