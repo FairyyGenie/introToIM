@@ -13,7 +13,10 @@ if (sensorValue > 400)
   }
   ````
 ### Schematic and picture of the project and video link
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_1.jpg" width="300" height="400" class="rotateimg90">
+Link to the video:
+
+
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_1.jpg" width="300" height="400">
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June17_2.jpg" width="500" height="300">
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June17/June_17_Arduino.png" width="700" height="500">. 
 
