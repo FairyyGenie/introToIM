@@ -7,6 +7,10 @@ And the switch serve to control the tone, if it is pressed the tone is higher th
 
 ### pictures/ schematic/ video link: 
 
+Here is the link to the Video: https://youtu.be/f8imkY9n1cI. 
+<img src="" width="400" height="500">. 
+<img src="" width="400" height="300">.
+
 ### Interesting thing: 
 
 Somehow at the beginning I thought I need the ```` pitches.h ```` file so I included it.  
