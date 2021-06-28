@@ -10,6 +10,7 @@ So I used four switches, blue, red, yellow, and green on arduino. Use the arduin
 
 Here is a link to the game video: https://youtu.be/r8KemEg4w1E.    
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/June28/June28.jpg" width="400" height="300">.   
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/June28/June28-1.png" width="600" height="700">.   
 
 ### Problem:
 The score counting to me was a problem.  
