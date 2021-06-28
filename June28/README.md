@@ -47,7 +47,7 @@ if (values[0]==1)
       greennum=0;
     }
 ````
-And here is the code to determint the score:
+And here is the code to determine the score:
 ````
 //use if function to set the scores
     if (using==r)
