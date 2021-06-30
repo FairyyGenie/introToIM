@@ -1,5 +1,6 @@
 ## For the final Project !!!
 ### Idea:
+I kind of want to build a music game of some sort, but at the same time I am kind of scared this is not creative enough so maybe I will think about this more.  
 ### Proposal:
 
 Maybe asked a song's chords?  Or maybe just have give the user choices to make a song ?  
