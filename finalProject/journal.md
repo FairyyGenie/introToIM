@@ -15,5 +15,25 @@ Suggestions from professor: have a way to hear the notes before selecting them m
 Move the hand from left to right with potentiometer and light sensor to go up and down, and a switch to catch it.  
 Catch the notes after hearing the melody once, and maybe give some hints. 
 
-### Concepts:
+### plan for each day:
+#### July 1st: 
+
+Try importing and finding some melody into processing first, and create sprites.
+
+#### July 2nd:
+
+Build the music question class.
+And set up the arduino sprite movement: light sensor and potentiometer.
+
+#### July 3rd:
+
+Figure out a way to let the arduino play the tone if choosed a note.
+
+#### July 4th:
+
+Game logic, and try adding hints and other stuff.
+
+#### July 5th:  
+
+Can I make this game more fun and interactive?  
 
