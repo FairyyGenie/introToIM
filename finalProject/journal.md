@@ -20,10 +20,28 @@ Catch the notes after hearing the melody once, and maybe give some hints.
 
 Try importing and finding some melody into processing first, and create sprites.
 
+Problem:
+My problem is this --> I am so bad at music and it is extremely hard to find a simple enough piano melody piece to have the player recognize the notes.  
+So I imported each note one by one finding the sound file for each note.(only the majors notes so C D E F G A B). 
+I put them in a Soundfile array and hoping to be able to play is one by one so it is a simple melody.  
+```
+for (int i=0; i<5;i++)
+{
+  playlist[i].play();
+}
+````
+But then this caused a huge chaotic sound problem with all five notes play at once.
+
 #### July 2nd:
 
 Build the music question class.
 And set up the arduino sprite movement: light sensor and potentiometer.
+
+Problem:
+I have to restructure the way the problem sound files are being play and the structure of the questions.  
+To reduce the confilcts between the sound file.  
+
+Have not got to arduino yet.
 
 #### July 3rd:
 
