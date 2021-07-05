@@ -40,6 +40,15 @@ And set up the arduino sprite movement: light sensor and potentiometer.
 Problem:
 I have to restructure the way the problem sound files are being play and the structure of the questions.  
 To reduce the confilcts between the sound file.  
+In the questions class, I wrote this :
+````
+ if (mousePressed==true && d<36)
+    {
+      playlist[0].play();
+    }
+````
+But then it doesn't respond to me, and then I realized it is because I was calling the ````questions.display()```` in set up function.  
+Naturally it doesn't work it should be in draw function.
 
 Have not got to arduino yet.
 
