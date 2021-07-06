@@ -4,7 +4,7 @@ name: Genie Hou
  Midterm Project: Music game + Arduino
  concept: questions asking you to put the right notes in the right place
  interactive: Arduino bread board to control the game
- version: 3 --changed the way questions is answered
+ version: 4 -- changed the arduino communication
  */
 
 
@@ -30,10 +30,17 @@ PImage hand;
 PFont myfont;
 
 //boolean used to communicate with arduino
-boolean playC, playD, playE, playF, playG, playA, playB;
+int playwhich;
+boolean clicked; //if arduino press switch
 
-//int to control the number of questions
-int count=1;
+//float to control the hand
+float handx=0;
+float handy=0;
+
+//count the number of questions
+int count;
+//use the light sensor to control the bg color
+int colorfbg;
 
 //class for the question
 class questions {
@@ -51,6 +58,7 @@ class questions {
 
   //constructor
   questions() {
+    count=count+1;
     ran1=round(random(0, 6));
     ran2=round(random(0, 6));
     ran3=round(random(0, 6));
@@ -96,8 +104,7 @@ class questions {
 
   //for the questions to be displayed
   void display()
-  {
-    
+  { 
     //set up the playlist
     eachsound();
 
@@ -175,47 +182,35 @@ class game {
     //if click on the image then the tone on arduino play
     if (mouseX<200 && mouseX>150 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
-      playC=true;
-    } else 
+      playwhich=1;
+    } 
+    else if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
-      playC=false;
+      playwhich=2;
     }
-    if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
+    else if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
-      playD=true;
-    } else {
-      playD=false;
+      playwhich=3;
+    } 
+    else if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+      playwhich=4;
+    } 
+    else if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+      playwhich=5;
+    } 
+    else if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+     playwhich=6;
+    } 
+    else if (mouseX<450 && mouseX>400 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+     playwhich=7;
     }
-    if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
+    else 
     {
-      playE=true;
-    } else {
-      playE=false;
-    }
-    if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
-    {
-      playF=true;
-    } else {
-      playF=false;
-    }
-    if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
-    {
-      playG=true;
-    } else {
-      playG=false;
-    }
-    if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
-    {
-      playA=true;
-    } else
-    {
-      playA=false;
-    }
-    if (mouseX<350 && mouseX>300 && mouseY<630 && mouseY>530 && mousePressed==true)
-    {
-      playB=true;
-    } else {
-      playB=false;
+    playwhich=0;
     }
   }
 
@@ -224,7 +219,8 @@ class game {
 
     //call the function to play sound
     playsound();
-    //movepiece();
+    hand();
+    movepiece();
 
     //situate the images
     C.resize(0, 100);
@@ -247,7 +243,7 @@ class game {
 
     B.resize(0, 100);
     image(B, 400, 530);
-    
+
     //display the questions
     Q1.display();
 
@@ -257,69 +253,81 @@ class game {
     textSize(30);
     fill(0, 0, 0);
     text("submit", 620, 175);
-    text(count,550,175);
-    
+
     //if press submit tells you right or wrong and then to the next question
     if (mouseX<750&& mouseX>600&&mouseY>140&&mouseY<190&&mousePressed==true)
     {
       Q1=new questions();
       Q1.display();
     }
-    /*for (int i=0;i<5;i++)
-     {
-     Q1.display();
-     Q1=new questions();
-     }*/
   }
 
+  //for the use to move the pieces into the right questions
   void movepiece()
   {
-     //if click on the image then it copy the image and then you can moce it
-    if (mouseX<200 && mouseX>150 && mouseY<300 && mouseY>200 && mousePressed==true)
+    //if click on the image then it copy the image and then you can moce it
+    if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
     {
-      playC=true;
-    } else 
+      image(C, handx, handy);
+    } 
+    if (handx<400 && handx>350 && handy<300 && handy>200 && clicked==true)
     {
-      playC=false;
+      image(D, handx, handy);
     }
-    if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
+    if (handx<600 && handx>550 && handy<300 && handy>200 && clicked==true)
     {
-      playD=true;
+      image(E, handx, handy);
+    } 
+    if (handx<150 && handx>100 && handy<750 && handy>650 && clicked==true)
+    {
+      image(F, handx, handy);
+    } 
+    if (handx<250 && handx>200 && handy<630 && handy>530 && clicked==true)
+    {
+      image(G, handx, handy);
+    } 
+    if (handx<350 && handx>300 && handy<750 && handy>650 && clicked==true)
+    {
+      image(A, handx, handy);
+    } 
+    if (handx<450 && handx>400 && handy<630 && handy>530 && clicked==true)
+    {
+      image(B, handx, handy);
+    } 
+  }
+
+  //have the hand move around
+  void hand()
+  {
+    hand.resize(0, 90);
+    handy=mouseY;
+    image(hand, handx, handy);
+  }
+}
+
+//function for the serial port
+void serialEvent(Serial port) {
+
+  //take the variables and use it in processing
+  String s=port.readStringUntil('\n');
+  s=trim(s);
+
+  //split the num into each variables
+  if (s!=null) {
+    println(s);
+    int values[]=int(split(s, ','));
+    colorfbg=(int)map(values[0], 420, 840, 0, 200);
+    handx=(int)map(values[2], 0, 1023, 0, width);
+    //click the switch then tone make sound
+    if (values[1]==1)
+    {
+      clicked=true;
     } else {
-      playD=false;
-    }
-    if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
-    {
-      playE=true;
-    } else {
-      playE=false;
-    }
-    if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
-    {
-      playF=true;
-    } else {
-      playF=false;
-    }
-    if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
-    {
-      playG=true;
-    } else {
-      playG=false;
-    }
-    if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
-    {
-      playA=true;
-    } else
-    {
-      playA=false;
-    }
-    if (mouseX<350 && mouseX>300 && mouseY<630 && mouseY>530 && mousePressed==true)
-    {
-      playB=true;
-    } else {
-      playB=false;
+      clicked=false;
     }
   }
+  //communicate from arduino
+  port.write(playwhich);
 }
 
 //initiating the game
@@ -330,6 +338,8 @@ void setup() {
   size(800, 800);
   background(247, 225, 194);
   port = new Serial(this, Serial.list()[3], 9600);
+  port.clear();
+  port.bufferUntil('\n');
 
   //loadImages
   A=loadImage("A.png");
@@ -354,6 +364,14 @@ void setup() {
   Amaj=new SoundFile(this, "A.wav");
   Bmaj=new SoundFile(this, "B.wav");
 
+  Game1=new game();
+  
+  port.write(0);
+}
+
+//turn the background into a function
+void backimage() {
+
   //text and situating the images 
   myfont = loadFont("Arial-Black-100.vlw");
   textFont(myfont);
@@ -367,18 +385,28 @@ void setup() {
   image(cdplay, 500, 650);
   earphone.resize(0, 100);
   image(earphone, 600, 530);
-
-  Game1=new game();
 }
 
+//begin description page
 void begin() {
 }
+
+//play page
 void play()
 {
   Game1.display();
 }
 
+//end page to restart ir exit
+void end(){
+
+
+}
+
+//draw function
 void draw()
 {
+  background(colorfbg);
+  backimage();
   play();
 }
