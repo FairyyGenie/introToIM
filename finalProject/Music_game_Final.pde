@@ -1,10 +1,10 @@
 /*
 name: Genie Hou
- date: 2021 June 8
+ date: 2021 July 8
  Midterm Project: Music game + Arduino
  concept: questions asking you to put the right notes in the right place
  interactive: Arduino bread board to control the game
- version: 1
+ version: 3 --changed the way questions is answered
  */
 
 
@@ -14,7 +14,7 @@ SoundFile Cmaj, Dmaj, Emaj, Fmaj, Gmaj, Amaj, Bmaj;
 import processing.serial.*;
 Serial port;
 
-//set up the images
+//set up the images and font
 PImage A;
 PImage B;
 PImage C;
@@ -27,8 +27,13 @@ PImage play;
 PImage notes;
 PImage earphone;
 PImage hand;
-
 PFont myfont;
+
+//boolean used to communicate with arduino
+boolean playC, playD, playE, playF, playG, playA, playB;
+
+//int to control the number of questions
+int count=1;
 
 //class for the question
 class questions {
@@ -61,6 +66,7 @@ class questions {
   //for the sound to play as order
   void eachsound()
   {
+    //to have the playlist array have the notes in the right order
     for (int i=0; i<5; i++)
     {
       if (order[i]==A)
@@ -91,15 +97,10 @@ class questions {
   //for the questions to be displayed
   void display()
   {
-    /*for (int i=0; i<5; i++)
-    {
-      order[i].resize(0, 100);
-      playlist[i].play();
-    }*/
     
     //set up the playlist
     eachsound();
-    
+
     //text and situating the images 
     myfont = loadFont("Arial-Black-100.vlw");
     textFont(myfont);
@@ -107,44 +108,222 @@ class questions {
     fill(205, 153, 255);
     text("press the circles to here the sounds:", 50, 350);
 
-    stroke(0,0,0);
+    //the circles representing the notes order
+    stroke(0, 0, 0);
     strokeWeight(6);
-    fill(255,255,255);
-    ellipse(100,450,75,75);
-    
-    stroke(0,0,0);
+    fill(255, 255, 255);
+    ellipse(100, 450, 75, 75);
+
+    stroke(0, 0, 0);
     strokeWeight(6);
-    fill(255,255,255);
-    ellipse(250,450,75,75);
-    
-    stroke(0,0,0);
+    fill(255, 255, 255);
+    ellipse(250, 450, 75, 75);
+
+    stroke(0, 0, 0);
     strokeWeight(6);
-    fill(255,255,255);
-    ellipse(400,450,75,75);
-    
-    stroke(0,0,0);
+    fill(255, 255, 255);
+    ellipse(400, 450, 75, 75);
+
+    stroke(0, 0, 0);
     strokeWeight(6);
-    fill(255,255,255);
-    ellipse(550,450,75,75);
-    
-    stroke(0,0,0);
+    fill(255, 255, 255);
+    ellipse(550, 450, 75, 75);
+
+    stroke(0, 0, 0);
     strokeWeight(6);
-    fill(255,255,255);
-    ellipse(700,450,75,75);
-    
-    float d=dist(mouseX,mouseY,100,450);
-     //when press the circle sound play
-    if (mousePressed)
+    fill(255, 255, 255);
+    ellipse(700, 450, 75, 75);
+
+    //to determine if user is pressing the circle
+    float d=dist(mouseX, mouseY, 100, 450);
+    float d1=dist(mouseX, mouseY, 250, 450);
+    float d2=dist(mouseX, mouseY, 400, 450);
+    float d3=dist(mouseX, mouseY, 550, 450);
+    float d4=dist(mouseX, mouseY, 700, 450);
+    //when press the circle sound play
+    if (d<37 && mousePressed==true)
     {
-      print("yes");
+      playlist[0].play();
+    } else if (d1<37&&mousePressed==true)
+    {
+      playlist[1].play();
+    } else if (d2<37&&mousePressed==true)
+    {
+      playlist[2].play();
+    } else if (d3<37&& mousePressed==true)
+    {
+      playlist[3].play();
+    } else if (d4<37&&mousePressed==true)
+    {
+      playlist[4].play();
     }
   }
 }
 
 class game {
+  //initiate questions in game class
+  questions Q1;
+
+  //game constructor
+  game() {
+    Q1=new questions();
+  }
+
+  //for each of the image to play sound on arduino
+  void playsound()
+  {
+    //if click on the image then the tone on arduino play
+    if (mouseX<200 && mouseX>150 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playC=true;
+    } else 
+    {
+      playC=false;
+    }
+    if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playD=true;
+    } else {
+      playD=false;
+    }
+    if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playE=true;
+    } else {
+      playE=false;
+    }
+    if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+      playF=true;
+    } else {
+      playF=false;
+    }
+    if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+      playG=true;
+    } else {
+      playG=false;
+    }
+    if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+      playA=true;
+    } else
+    {
+      playA=false;
+    }
+    if (mouseX<350 && mouseX>300 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+      playB=true;
+    } else {
+      playB=false;
+    }
+  }
+
+  //display function
+  void display() {
+
+    //call the function to play sound
+    playsound();
+    //movepiece();
+
+    //situate the images
+    C.resize(0, 100);
+    image(C, 150, 200);
+
+    D.resize(0, 100);
+    image(D, 350, 200);
+
+    E.resize(0, 100);
+    image(E, 550, 200);
+
+    F.resize(0, 100);
+    image(F, 100, 650);
+
+    G.resize(0, 100);
+    image(G, 200, 530);
+
+    A.resize(0, 100);
+    image(A, 300, 650);
+
+    B.resize(0, 100);
+    image(B, 400, 530);
+    
+    //display the questions
+    Q1.display();
+
+    //a button to submit answer    
+    fill(255, 255, 255);
+    rect(600, 140, 150, 50);
+    textSize(30);
+    fill(0, 0, 0);
+    text("submit", 620, 175);
+    text(count,550,175);
+    
+    //if press submit tells you right or wrong and then to the next question
+    if (mouseX<750&& mouseX>600&&mouseY>140&&mouseY<190&&mousePressed==true)
+    {
+      Q1=new questions();
+      Q1.display();
+    }
+    /*for (int i=0;i<5;i++)
+     {
+     Q1.display();
+     Q1=new questions();
+     }*/
+  }
+
+  void movepiece()
+  {
+     //if click on the image then it copy the image and then you can moce it
+    if (mouseX<200 && mouseX>150 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playC=true;
+    } else 
+    {
+      playC=false;
+    }
+    if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playD=true;
+    } else {
+      playD=false;
+    }
+    if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
+    {
+      playE=true;
+    } else {
+      playE=false;
+    }
+    if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+      playF=true;
+    } else {
+      playF=false;
+    }
+    if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+      playG=true;
+    } else {
+      playG=false;
+    }
+    if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
+    {
+      playA=true;
+    } else
+    {
+      playA=false;
+    }
+    if (mouseX<350 && mouseX>300 && mouseY<630 && mouseY>530 && mousePressed==true)
+    {
+      playB=true;
+    } else {
+      playB=false;
+    }
+  }
 }
 
-questions Q1;
+//initiating the game
+game Game1;
 
 void setup() {
   //size background and the port
@@ -185,12 +364,21 @@ void setup() {
   notes.resize(0, 100);
   image(notes, 20, 100);
   cdplay.resize(150, 0);
-  image(cdplay, 600, 600);
+  image(cdplay, 500, 650);
+  earphone.resize(0, 100);
+  image(earphone, 600, 530);
 
-  Q1=new questions();
-  Q1.display();
+  Game1=new game();
+}
+
+void begin() {
+}
+void play()
+{
+  Game1.display();
 }
 
 void draw()
 {
+  play();
 }
