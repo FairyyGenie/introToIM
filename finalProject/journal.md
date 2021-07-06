@@ -62,6 +62,7 @@ Figure out a way to let the arduino play the tone if choosed a note.
 Problem:   
 I am not sure why but I am always having trouble with counting the questions or counting the scores. It just goes up exponentially.  
 While I only need it to be one after another, I am changing it to just text writing first second and third and droping the questions 1, 2, 3, 4.  
+Not even that work, I am dropping the count questions function.  
 
 #### July 4th:
 
