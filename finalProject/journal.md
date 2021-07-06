@@ -1,8 +1,8 @@
 ## For the final Project !!!
 
 ### Concept used in the project:  
-Serial Communication as the main way to play the game.  
-Arduino: Analog INPUT, Digital INPUT, Analog OUTPUT, Tone. 
+Serial Communication as the main way to play the game.   
+Arduino: Analog INPUT, Digital INPUT, Analog OUTPUT, Tone.   
 Processing: Sprite, Sound, Text, Images. 
 
 ### Idea:
