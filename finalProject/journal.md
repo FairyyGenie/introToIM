@@ -52,6 +52,9 @@ Naturally it doesn't work it should be in draw function.
 
 Have not got to arduino yet.
 
+July 4th:
+I need to also revise the game logic, I didn't think of having an end and a way to go to the next questions so I am adding it now.
+
 #### July 3rd:
 
 Figure out a way to let the arduino play the tone if choosed a note.
