@@ -71,3 +71,6 @@ Game logic, and try adding hints and other stuff.
 
 Can I make this game more fun and interactive?  
 
+Problem:  
+I did not get to add functions. I thought it would be easy to create a simple music game but it is really not that simple especially when I am not great at music.  
+
