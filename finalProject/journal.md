@@ -68,12 +68,15 @@ Not even that work, I am dropping the count questions function.
 
 Game logic, and try adding hints and other stuff.  
 
-Problem:
+Problem 1:
 Set up the arduino communications and the way to play it today. I am not sure if I am right.  
 But originally I was going to send 7 integers from processing to Arduino.   
 And somehow arduino then slowed down as if it can't process that many integers.  
 So I changed my integer to just having one and each number has different meaning.  
 Is it because the processing is too fast and arduino cannot process?  
+
+Changed the usage of light sensor:  
+I was going to use it to control the sprite but it is too hard to use, so I use the light sensor int to control the background color.  
 
 #### July 5th:  
 
