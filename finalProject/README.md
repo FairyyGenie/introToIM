@@ -80,6 +80,6 @@ if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
         }
       }
  ````
-
-
+### 4. A clever thing: 
+I decided to use the LED to show right and wrong so there are no indication of right and wrong on processing screen.
 
