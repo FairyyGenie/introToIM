@@ -143,4 +143,5 @@ if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
 ````
 
 #### July 7th:  
-
+Add a way to determine the right and wrong of the question and show through led light.  
+If correct green led light up, if false the red one light up.  
