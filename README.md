@@ -9,6 +9,6 @@ So what is it gonna be ?
 
 how do I make ***this*** bold
 
-Here is a picture from final project:
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="500" height="500" >
-<img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="500" height="500" >
+Here are pictures from final project and midtern project:
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="500" height="500" >.  
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Screenshotsofgame/begin.png" width="500" height="500" >.  
