@@ -1,5 +1,22 @@
 ## Music and its order!!
 
+### Concept used in the project:  
+Serial Communication as the main way to play the game.   
+Arduino: Analog INPUT, Digital INPUT, Digital OUTPUT, Analog OUTPUT, Tone.   
+Processing: Sprite, Sound, Text, Images, StateMachine.   
+
+This is a music topic game challenging the users to recognize notes.  
+Arduino:  
+Photon sensor is used to control background color.  
+LEDs are there to show if you answer the questions correctly. Green for correct, and Red for wrong.  
+Tone is used to play notes when click on images of C, D, E, F.....
+Switch is used to select answer in seperation with paly the note from tone(mousePressed to play tone).  
+Potentiometer is used to control the X coordinate of the hand sprite.  
+
+Processing:  
+Showing questions and play the piano notes when click on question.  
+Examine the answer through arrays.  
+
 ### Video of arduino and processing & Screenshots & Schematic:  
 
 video of processing view: https://youtu.be/iXQvuL4FXzI.   
