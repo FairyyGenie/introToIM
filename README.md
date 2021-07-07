@@ -5,9 +5,7 @@
 
 Projects are in its seperate files!  Checkout the midterm and final project! They are fun !!
 
-So what is it gonna be ?
-
-how do I make ***this*** bold
+In this course: We have learned many valuable technical skills. And it really is a hands-on class, building projects is really fulfilling.  
 
 Here are pictures from final project and midtern project:   
 
