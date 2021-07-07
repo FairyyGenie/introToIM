@@ -2,8 +2,8 @@
 
 ### Concept used in the project:  
 Serial Communication as the main way to play the game.   
-Arduino: Analog INPUT, Digital INPUT, Analog OUTPUT, Tone.   
-Processing: Sprite, Sound, Text, Images. 
+Arduino: Analog INPUT, Digital INPUT, Digital OUTPUT, Analog OUTPUT, Tone.   
+Processing: Sprite, Sound, Text, Images, StateMachine.   
 
 ### Idea:
 I kind of want to build a music game of some sort, but at the same time I am kind of scared this is not creative enough so maybe I will think about this more.  
