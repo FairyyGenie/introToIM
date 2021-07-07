@@ -44,4 +44,13 @@ video of arduino view: https://youtu.be/f5DdZ445FY8.
 ### Schematic:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-schmetic.png" width="800" height="640">. 
 
+## Problems: 
+
+### 1. I am so bad at music and it is extremely hard to find a simple enough piano melody piece to have the player recognize the notes.
+So I imported each note one by one finding the sound file for each note.(only the majors notes so C D E F G A B). I put them in a Soundfile array and hoping to be able to play is one by one so it is a simple melody.
+### 2.  Set up the arduino communications and sending too many integer from processing to arduino does not work
+But originally I was going to send 7 integers from processing to Arduino.
+And somehow arduino then slowed down as if it can't process that many integers.
+So I changed my integer to just having one and each number has different meaning.
+Is it because the processing is too fast and arduino cannot process?
 
