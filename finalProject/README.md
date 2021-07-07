@@ -53,4 +53,33 @@ But originally I was going to send 7 integers from processing to Arduino.
 And somehow arduino then slowed down as if it can't process that many integers.
 So I changed my integer to just having one and each number has different meaning.
 Is it because the processing is too fast and arduino cannot process?
+### 3. I have tried many different ways to have the most effective way of answering the questions.
+And the first few methods I tried was to just press the switch and it automatically gets added to a answer[] array.
+It didn't work however, because when I press the switch it gets read more than one time.
+So I decided eventually to add using key to determine position.  
+code as follow:
+````
+if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=C;
+        } else if (key=='2')
+        {
+          answer[1]=C;
+        } else if (key=='3')
+        {
+          answer[2]=C;
+        } else if (key=='4')
+        {
+          answer[3]=C;
+        } else if (key=='5')
+        {
+          answer[4]=C;
+        }
+      }
+ ````
+
+
 
