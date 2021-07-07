@@ -4,9 +4,8 @@ name: Genie Hou
  Midterm Project: Music game + Arduino
  concept: questions asking you to put the right notes in the right place
  interactive: Arduino bread board to control the game
- version: 4 -- changed the arduino communication
+ version: 5.5 -- changed the answer question method added key's to determine position
  */
-
 
 //import sound & port library and import sound files
 import processing.sound.*;
@@ -170,6 +169,7 @@ class questions {
 class game {
   //initiate questions in game class
   questions Q1;
+  PImage answer[]=new PImage[5];
 
   //game constructor
   game() {
@@ -183,34 +183,27 @@ class game {
     if (mouseX<200 && mouseX>150 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
       playwhich=1;
-    } 
-    else if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
+    } else if (mouseX<400 && mouseX>350 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
       playwhich=2;
-    }
-    else if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
+    } else if (mouseX<600 && mouseX>550 && mouseY<300 && mouseY>200 && mousePressed==true)
     {
       playwhich=3;
-    } 
-    else if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
+    } else if (mouseX<150 && mouseX>100 && mouseY<750 && mouseY>650 && mousePressed==true)
     {
       playwhich=4;
-    } 
-    else if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
+    } else if (mouseX<250 && mouseX>200 && mouseY<630 && mouseY>530 && mousePressed==true)
     {
       playwhich=5;
-    } 
-    else if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
+    } else if (mouseX<350 && mouseX>300 && mouseY<750 && mouseY>650 && mousePressed==true)
     {
-     playwhich=6;
-    } 
-    else if (mouseX<450 && mouseX>400 && mouseY<630 && mouseY>530 && mousePressed==true)
+      playwhich=6;
+    } else if (mouseX<450 && mouseX>400 && mouseY<630 && mouseY>530 && mousePressed==true)
     {
-     playwhich=7;
-    }
-    else 
+      playwhich=7;
+    } else 
     {
-    playwhich=0;
+      playwhich=0;
     }
   }
 
@@ -250,9 +243,9 @@ class game {
     //a button to submit answer    
     fill(255, 255, 255);
     rect(600, 140, 150, 50);
-    textSize(30);
+    textSize(28);
     fill(0, 0, 0);
-    text("submit", 620, 175);
+    text("Restart", 620, 175);
 
     //if press submit tells you right or wrong and then to the next question
     if (mouseX<750&& mouseX>600&&mouseY>140&&mouseY<190&&mousePressed==true)
@@ -260,43 +253,179 @@ class game {
       Q1=new questions();
       Q1.display();
     }
+
+    //print the answers on to the question circles
+    if (answer[0]!=null&&answer[1]==null) {
+      image(answer[0], 50, 400);
+    } else if (answer[1]!=null&&answer[2]==null) {
+      image(answer[0], 50, 400);
+      image(answer[1], 200, 400);
+    } else if (answer[2]!=null&&answer[3]==null) {
+      image(answer[0], 50, 400);
+      image(answer[1], 200, 400);
+      image(answer[2], 350, 400);
+    } else if (answer[3]!=null&&answer[4]==null) {
+      image(answer[0], 50, 400);
+      image(answer[1], 200, 400);
+      image(answer[2], 350, 400);
+      image(answer[3], 500, 400);
+    } else if (answer[4]!=null) {
+      image(answer[0], 50, 400);
+      image(answer[1], 200, 400);
+      image(answer[2], 350, 400);
+      image(answer[3], 500, 400);
+      image(answer[4], 650, 400);
+    }
   }
 
   //for the use to move the pieces into the right questions
   void movepiece()
   {
-    //if click on the image then it copy the image and then you can moce it
+    //if click on the image and press the key 1 to 5 you can put it in the right place
     if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
     {
-      image(C, handx, handy);
-    } 
-    if (handx<400 && handx>350 && handy<300 && handy>200 && clicked==true)
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=C;
+        } else if (key=='2')
+        {
+          answer[1]=C;
+        } else if (key=='3')
+        {
+          answer[2]=C;
+        } else if (key=='4')
+        {
+          answer[3]=C;
+        } else if (key=='5')
+        {
+          answer[4]=C;
+        }
+      }
+    } else if (handx<400 && handx>350 && handy<300 && handy>200 && clicked==true)
     {
-      image(D, handx, handy);
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=D;
+        } else if (key=='2')
+        {
+          answer[1]=D;
+        } else if (key=='3')
+        {
+          answer[2]=D;
+        } else if (key=='4')
+        {
+          answer[3]=D;
+        } else if (key=='5')
+        {
+          answer[4]=D;
+        }
+      }
+    } else if (handx<600 && handx>550 && handy<300 && handy>200 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=E;
+        } else if (key=='2')
+        {
+          answer[1]=E;
+        } else if (key=='3')
+        {
+          answer[2]=E;
+        } else if (key=='4')
+        {
+          answer[3]=E;
+        } else if (key=='5')
+        {
+          answer[4]=E;
+        }
+      }
+    } else if (handx<150 && handx>100 && handy<750 && handy>650 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=F;
+        } else if (key=='2')
+        {
+          answer[1]=F;
+        } else if (key=='3')
+        {
+          answer[2]=F;
+        } else if (key=='4')
+        {
+          answer[3]=F;
+        } else if (key=='5')
+        {
+          answer[4]=F;
+        }
+      }
+    } else if (handx<250 && handx>200 && handy<630 && handy>530 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=G;
+        } else if (key=='2')
+        {
+          answer[1]=G;
+        } else if (key=='3')
+        {
+          answer[2]=G;
+        } else if (key=='4')
+        {
+          answer[3]=G;
+        } else if (key=='5')
+        {
+          answer[4]=G;
+        }
+      }
+    } else if (handx<350 && handx>300 && handy<750 && handy>650 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=A;
+        } else if (key=='2')
+        {
+          answer[1]=A;
+        } else if (key=='3')
+        {
+          answer[2]=A;
+        } else if (key=='4')
+        {
+          answer[3]=A;
+        } else if (key=='5')
+        {
+          answer[4]=A;
+        }
+      }
+    } else if (handx<450 && handx>400 && handy<630 && handy>530 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=B;
+        } else if (key=='2')
+        {
+          answer[1]=B;
+        } else if (key=='3')
+        {
+          answer[2]=B;
+        } else if (key=='4')
+        {
+          answer[3]=B;
+        } else if (key=='5')
+        {
+          answer[4]=B;
+        }
+      }
     }
-    if (handx<600 && handx>550 && handy<300 && handy>200 && clicked==true)
-    {
-      image(E, handx, handy);
-    } 
-    if (handx<150 && handx>100 && handy<750 && handy>650 && clicked==true)
-    {
-      image(F, handx, handy);
-    } 
-    if (handx<250 && handx>200 && handy<630 && handy>530 && clicked==true)
-    {
-      image(G, handx, handy);
-    } 
-    if (handx<350 && handx>300 && handy<750 && handy>650 && clicked==true)
-    {
-      image(A, handx, handy);
-    } 
-    if (handx<450 && handx>400 && handy<630 && handy>530 && clicked==true)
-    {
-      image(B, handx, handy);
-    } 
   }
 
-  //have the hand move around
+  //have the hand sprite move around
   void hand()
   {
     hand.resize(0, 90);
@@ -316,7 +445,25 @@ void serialEvent(Serial port) {
   if (s!=null) {
     println(s);
     int values[]=int(split(s, ','));
-    colorfbg=(int)map(values[0], 420, 840, 0, 200);
+
+    //use the lightsensor to control background color
+    if (values[0]<500) {
+      colorfbg=80;
+    } else if (values[0]>=500&&values[0]<600)
+    {
+      colorfbg=100;
+    } else if (values[0]>=600&&values[0]<650)
+    {
+      colorfbg=150;
+    } else if (values[0]>=650&&values[0]<700)
+    {
+      colorfbg=200;
+    } else if (values[0]>=700)
+    {
+      colorfbg=220;
+    }
+
+    //potentiometer to control hand's x
     handx=(int)map(values[2], 0, 1023, 0, width);
     //click the switch then tone make sound
     if (values[1]==1)
@@ -336,7 +483,6 @@ game Game1;
 void setup() {
   //size background and the port
   size(800, 800);
-  background(247, 225, 194);
   port = new Serial(this, Serial.list()[3], 9600);
   port.clear();
   port.bufferUntil('\n');
@@ -365,7 +511,7 @@ void setup() {
   Bmaj=new SoundFile(this, "B.wav");
 
   Game1=new game();
-  
+
   port.write(0);
 }
 
@@ -395,12 +541,16 @@ void begin() {
 void play()
 {
   Game1.display();
+  //if press submit tells you right or wrong and then to the next question
+  if (mouseX<750&& mouseX>600&&mouseY>140&&mouseY<190&&mousePressed==true)
+  {
+    Game1=new game();
+    Game1.display();
+  }
 }
 
 //end page to restart ir exit
-void end(){
-
-
+void end() {
 }
 
 //draw function
