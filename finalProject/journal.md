@@ -83,11 +83,64 @@ Is it because the processing is too fast and arduino cannot process?
 
 Changed the usage of light sensor:  
 I was going to use it to control the sprite but it is too hard to use, so I use the light sensor int to control the background color.  
+````
+//use the lightsensor to control background color
+    if (values[0]<500) {
+      colorfbg=80;
+    } else if (values[0]>=500&&values[0]<600)
+    {
+      colorfbg=100;
+    } else if (values[0]>=600&&values[0]<650)
+    {
+      colorfbg=150;
+    } else if (values[0]>=650&&values[0]<700)
+    {
+      colorfbg=200;
+    } else if (values[0]>=700)
+    {
+      colorfbg=220;
+    }
+````
 
 #### July 5th:  
 
 Can I make this game more fun and interactive?  
 
 Problem:  
-I did not get to add functions. I thought it would be easy to create a simple music game but it is really not that simple especially when I am not great at music.  
+I did not get to add functions. I thought it would be easy to create a simple music game but it is really not that simple especially when I am not great at music.
+
+#### July 6th:  
+
+The answering question logic and method.  
+
+Problem:  
+I have tried many different ways to have the most effective way of answering the questions.  
+And the first few methods I tried was to just press the switch and it automatically gets added to a ````answer[] array````.  
+It didn't work however, because when I press the switch it gets read more than one time.  
+So I decided eventually to add using key to determine position.
+code as follow:
+````
+if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
+    {
+      if (keyPressed) {
+        if (key=='1')
+        {
+          answer[0]=C;
+        } else if (key=='2')
+        {
+          answer[1]=C;
+        } else if (key=='3')
+        {
+          answer[2]=C;
+        } else if (key=='4')
+        {
+          answer[3]=C;
+        } else if (key=='5')
+        {
+          answer[4]=C;
+        }
+      }
+````
+
+#### July 7th:  
 
