@@ -1,6 +1,6 @@
-## Music and its order!!
+# Music and its order!!
 
-### Concept used in the project:  
+## Concept used in the project:  
 Serial Communication as the main way to play the game.   
 Arduino: Analog INPUT, Digital INPUT, Digital OUTPUT, Analog OUTPUT, Tone.   
 Processing: Sprite, Sound, Text, Images, StateMachine.   
@@ -17,31 +17,31 @@ Processing:
 Showing questions and play the piano notes when click on question.  
 Examine the answer through arrays.  
 
-### Video of arduino and processing & Screenshots & Schematic:  
+## Video of arduino and processing & Screenshots & Schematic:  
 
 video of processing view: https://youtu.be/iXQvuL4FXzI.   
 video of arduino view: https://youtu.be/f5DdZ445FY8. 
 
-#### Starting state:  
+### Starting state:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-1.png" width="400" height="400">.  
 
-#### Play stage:  
+### Play stage:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="400" height="400">.  
 
-#### Input answers:  
+### Input answers:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-3.png" width="400" height="400">.   
 
-#### Press Restart:  
+### Press Restart:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-4.png" width="400" height="400">. 
 
-#### Press Exit:  
+### Press Exit:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-5.png" width="400" height="400">.  
 
-#### Pics of the arduino panel:  
+### Pics of the arduino panel:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-6.jpg" width="500" height="400">. 
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-7.jpg" width="500" height="400">. 
 
-#### Schematic:  
+### Schematic:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-schmetic.png" width="800" height="640">. 
 
 
