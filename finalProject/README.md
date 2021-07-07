@@ -44,6 +44,12 @@ video of arduino view: https://youtu.be/f5DdZ445FY8.
 ### Schematic:  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-schmetic.png" width="800" height="640">. 
 
+## Difficulty:
+At first I though this wouldn't be a hard game to built, oh boy was I wrong.  
+The hardest thing about this game is that there are so many moving parts and as we are using Serial comunications the moving parts are from different platform.  
+It is common for me to miss a small detail and it wouldn't work and I will have to retrace my code which I have 650 lines of codes.  
+But it is worth it, finishing it feels amazing.
+
 ## Problems: 
 
 ### 1. I am so bad at music and it is extremely hard to find a simple enough piano melody piece to have the player recognize the notes.
@@ -81,5 +87,8 @@ if (handx<200 && handx>150 && handy<300 && handy>200 && clicked==true)
       }
  ````
 ### 4. A clever thing: 
-I decided to use the LED to show right and wrong so there are no indication of right and wrong on processing screen.
+I decided to use the LED to show right and wrong so there are no indication of right and wrong on processing screen.  
+
+### 5. the design mentality: 
+I am not sure if this is a easy game for user to play. Because we are using arduino panel, it is not that easy to understand how to operate the game.
 
