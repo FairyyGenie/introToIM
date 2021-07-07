@@ -30,6 +30,8 @@ PFont myfont;
 
 //boolean used to communicate with arduino
 int playwhich;
+int state=0;
+int lightup;
 boolean clicked; //if arduino press switch
 
 //float to control the hand
@@ -41,12 +43,17 @@ int count;
 //use the light sensor to control the bg color
 int colorfbg;
 
+//order array for the question
+PImage[] order=new PImage[5];
+//answer array to compare
+PImage answer[]=new PImage[5];
+
+
 //class for the question
 class questions {
 
   //the arrays for images
   PImage[] chordspic={A, B, C, D, E, F, G};
-  PImage[] order=new PImage[5];
   SoundFile[] playlist=new SoundFile[5];
   //set up random numbers
   int ran1;
@@ -169,7 +176,6 @@ class questions {
 class game {
   //initiate questions in game class
   questions Q1;
-  PImage answer[]=new PImage[5];
 
   //game constructor
   game() {
@@ -247,33 +253,39 @@ class game {
     fill(0, 0, 0);
     text("Restart", 620, 175);
 
+    fill(255, 255, 255);
+    rect(360, 140, 140, 50);
+    textSize(28);
+    fill(0, 0, 0);
+    text("Exit", 400, 175);
+
+
     //if press submit tells you right or wrong and then to the next question
     if (mouseX<750&& mouseX>600&&mouseY>140&&mouseY<190&&mousePressed==true)
     {
       Q1=new questions();
       Q1.display();
+      //reset the questions to null
+      for (int i=0; i<5; i++)
+      {
+        answer[i]=null;
+      }
     }
 
     //print the answers on to the question circles
-    if (answer[0]!=null&&answer[1]==null) {
+    if (answer[0]!=null) {
       image(answer[0], 50, 400);
-    } else if (answer[1]!=null&&answer[2]==null) {
-      image(answer[0], 50, 400);
+    } 
+    if (answer[1]!=null) {
       image(answer[1], 200, 400);
-    } else if (answer[2]!=null&&answer[3]==null) {
-      image(answer[0], 50, 400);
-      image(answer[1], 200, 400);
+    } 
+    if (answer[2]!=null) {
       image(answer[2], 350, 400);
-    } else if (answer[3]!=null&&answer[4]==null) {
-      image(answer[0], 50, 400);
-      image(answer[1], 200, 400);
-      image(answer[2], 350, 400);
+    } 
+    if (answer[3]!=null) {
       image(answer[3], 500, 400);
-    } else if (answer[4]!=null) {
-      image(answer[0], 50, 400);
-      image(answer[1], 200, 400);
-      image(answer[2], 350, 400);
-      image(answer[3], 500, 400);
+    }
+    if (answer[4]!=null) {
       image(answer[4], 650, 400);
     }
   }
@@ -474,7 +486,7 @@ void serialEvent(Serial port) {
     }
   }
   //communicate from arduino
-  port.write(playwhich);
+  port.write(playwhich+","+lightup+"\n");
 }
 
 //initiating the game
@@ -535,6 +547,26 @@ void backimage() {
 
 //begin description page
 void begin() {
+  background(235, 245, 251);
+  //text and situating the images 
+  myfont = loadFont("Arial-Black-100.vlw");
+  textFont(myfont);
+  textSize(40);
+  fill(165, 89, 241);
+  text("Can you find the right note?", 100, 100);
+
+  play.resize(0, 200);
+  image(play, 300, 200);
+
+  textSize(28);
+  text("Press the mouse anywhere to start !!", 130, 600);
+
+  textSize(28);
+  text("Use the arduino panel to answer the question ", 80, 550);
+  //press anywhere to start
+  if (mousePressed) {
+    state=1;
+  }
 }
 
 //play page
@@ -547,16 +579,51 @@ void play()
     Game1=new game();
     Game1.display();
   }
+  //if press exit then exit game
+  if (mouseX<500&& mouseX>360&&mouseY>140&&mouseY<190&&mousePressed==true)
+  {
+    state=2;
+  }
 }
 
 //end page to restart ir exit
 void end() {
+  background(0, 0, 0);
+  textSize(50);
+  fill(255, 255, 255);
+  text("Game Over ", 250, 400);
+
+  //press anywhere to exit the game
+  if (mousePressed==true) {
+    exit();
+  }
 }
 
 //draw function
 void draw()
 {
-  background(colorfbg);
-  backimage();
-  play();
+  //use state machine to control the begin play and end
+  if (state==0) {
+    begin();
+  } else if (state==1) {
+    background(colorfbg);
+    backimage();
+    play();
+  } else if (state==2)
+  {
+    end();
+  }
+
+  //check if answer correct
+  for (int i=0; i<5; i++)
+  {
+    if (answer[i]==order[i])
+    {
+      //green led
+      lightup=1;
+    } else {
+      //red led
+      lightup=2;
+    }
+  }
 }
