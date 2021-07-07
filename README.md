@@ -9,6 +9,6 @@ So what is it gonna be ?
 
 how do I make ***this*** bold
 
-Here is a picture from a random place:
-
-![](https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg)
+Here is a picture from final project:
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="500" height="500" >
+<img src="https://github.com/FairyyGenie/introToIM/blob/main/finalProject/Imagesofgame/final-2.png" width="500" height="500" >
