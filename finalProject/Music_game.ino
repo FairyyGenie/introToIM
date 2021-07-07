@@ -15,6 +15,8 @@ const int Button = A4;
 const int poten = A1;
 const int light = A0;
 const int toneport = 10;
+const int redled = 6;
+const int greenled = 3;
 
 //add notes into a array
 int notes[] = {
@@ -32,6 +34,8 @@ void setup() {
   pinMode(light, INPUT);
   pinMode(poten, INPUT);
   pinMode(toneport, OUTPUT);
+  pinMode(greenled, OUTPUT);
+  pinMode(redled, OUTPUT);
 
 
 }
@@ -41,7 +45,9 @@ void loop() {
   if (Serial.available() > 0) {
 
     //to know which tone to play
-    int playwhich = Serial.read();
+    int playwhich = Serial.parseInt();
+    int whichlight = Serial.parseInt();
+
     if (playwhich == 1)
     {
       tone(toneport, notes[0], 300);
@@ -75,6 +81,16 @@ void loop() {
       noTone(toneport);
     }
 
+    //ligth up led according to answer right and wrong
+    if (whichlight == 1)
+    {
+      digitalWrite(greenled, HIGH);
+      digitalWrite(redled, LOW);
+    }
+    else if (whichlight == 2) {
+      digitalWrite(redled, HIGH);
+      digitalWrite(greenled, LOW);
+    }
     //int of the sensors
     int lightsense = analogRead(light);
     delay(1);
