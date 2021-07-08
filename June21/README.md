@@ -17,6 +17,6 @@ Here is the link to the Video: https://youtu.be/f8imkY9n1cI.
 1. Somehow at the beginning I thought I need the ```` pitches.h ```` file so I included it.  
 But then I realized it is really not needed. I can just use the differences between the frequencies.  
 
-2. There don't seem to be a define way to draw potentiometer on a schmetic diagram.  
+2. There don't seem to be a define way to draw potentiometer on a schmetic diagram.   
    The one I found just wrote POT besides the resistor icon and I am not 100 percent sure that is correct.
 
