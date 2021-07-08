@@ -11,7 +11,7 @@ And then the lines randomly popping in the frame is made using the ````noise()``
 <img src="TVbuzz.png" width=420 height="280">
 
 ### Stage 2  
-<img src="TVopen.png" width=420 height="280">
+<img src="TVopen.png" width=420 height="280">. 
 
 
 ## Questions found
