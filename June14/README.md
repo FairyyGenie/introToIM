@@ -25,4 +25,4 @@ So do engineers just cut them? Maybe??
 After drawing the schematic, another question came to mind.  
 Why is that the resistor for switch are after the connection to A pins?  
 I know that the resistors for LED lights are to protect them then are the 10k ohms resistor only use to connect to the ground pin?  
-Or is it protecting the switch, if so how?  
+Or is it protecting the switch, if so how?   
