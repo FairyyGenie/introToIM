@@ -4,7 +4,7 @@
 
 So processing will tell you which color to choose by showing you the color and the words. But the words are there to confuse you.  
 To earn points, press the switch that matches the color of the word and not the text.
-So I used four switches, blue, red, yellow, and green on arduino. Use the arduino to answer the question on processing.  
+So I used four switches, blue, red, yellow, and green on arduino. Use the arduino to answer the question on processing.   
 
 ### Pictures and schematic and video link
 
