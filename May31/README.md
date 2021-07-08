@@ -31,7 +31,7 @@ I try to put text in as a part of the art.
 At first it wouldn't show up because I put it in setup, then after some digging online I realized it is because the draw function will cover it within a moment.  
 Then I put them in draw function, but it still wouldn't show up.  
 So I had to change the order of my code mutiple times for the text to show up hence the 2.5 versions.  
-Eventually putting the text at the end of the functions worked.
+Eventually putting the text at the end of the functions worked.  
 
 I also had a minor confusion with the touching of mouse with the rectangle box and circle box.  
 But that was easy to clear up by revisiting the class recording again.
