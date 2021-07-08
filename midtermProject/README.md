@@ -1,6 +1,6 @@
 # Documentation for the midterm project
 
-## First sketch of the game
+## First sketch of the game:  
 This sketch did not help too much, the game turned out to be completely different.  
 <img src="https://github.com/FairyyGenie/introToIM/blob/main/midtermProject/Images/midtermsketch.PNG" width="200" height="300">
 
