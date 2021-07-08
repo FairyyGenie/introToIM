@@ -2,8 +2,7 @@
 
 ### And here is the screenshot of it !!
 
-It is very fun to create a picture just with imagination.
-
+It is very fun to create a picture just with imagination.  
 I find the arc function very interesting. It took me a while to realize where it is starting from and to where.
 
 Because in normal math when we say from 0 degree to 180 degree, it should be the upper half circle. 
